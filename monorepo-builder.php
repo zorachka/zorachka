@@ -15,6 +15,7 @@ use Symplify\MonorepoBuilder\Release\ReleaseWorker\UpdateReplaceReleaseWorker;
 
 return static function (MBConfig $mbConfig): void {
     $mbConfig->packageDirectories([__DIR__ . '/packages']);
+    $mbConfig->packageDirectoriesExcludes([__DIR__ . '/packages/next-package']);
 
     $mbConfig->defaultBranch('main');
 
