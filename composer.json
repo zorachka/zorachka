@@ -10,9 +10,25 @@
     "require": {
         "php": "^8.1",
         "ext-apcu": "*",
+        "cycle/database": "^2.4",
+        "cycle/migrations": "^4.0",
+        "cycle/schema-migrations-generator": "^2.1",
+        "doctrine/migrations": "^3.6",
+        "doctrine/sql-formatter": "^1.1",
+        "filp/whoops": "^2.15",
+        "laminas/laminas-diactoros": "^2.7",
+        "laminas/laminas-stdlib": "^3.6",
+        "laminas/laminas-stratigility": "^3.9",
+        "mezzio/mezzio": "^3.7",
+        "mezzio/mezzio-fastroute": "^3.0.3",
+        "mezzio/mezzio-helpers": "^5.7",
+        "monolog/monolog": "^3.2",
         "php-di/php-di": "^7.0",
-        "symfony/dependency-injection": "^5.0",
-        "symfony/http-kernel": "^5.0",
+        "psr/clock": "^1.0",
+        "psr/event-dispatcher": "^1.0",
+        "ramsey/uuid": "^4.7",
+        "symfony/console": "^6.2",
+        "symfony/mailer": "^5.3",
         "webmozart/assert": "^1.11"
     },
     "require-dev": {
@@ -25,21 +41,84 @@
     },
     "autoload": {
         "psr-4": {
+            "Zorachka\\Clock\\": [
+                "packages/clock/src"
+            ],
+            "Zorachka\\Console\\": [
+                "packages/console/src"
+            ],
             "Zorachka\\Container\\": "packages/container/src",
-            "Zorachka\\FirstPackage\\": "packages/first-package/src",
-            "Zorachka\\SecondPackage\\": "packages/second-package/src"
+            "Zorachka\\Database\\": [
+                "packages/database/src"
+            ],
+            "Zorachka\\Directories\\": [
+                "packages/directories/src"
+            ],
+            "Zorachka\\Environment\\": [
+                "packages/environment/src"
+            ],
+            "Zorachka\\ErrorHandler\\": [
+                "packages/error-handler/src"
+            ],
+            "Zorachka\\EventDispatcher\\": "packages/event-dispatcher/src",
+            "Zorachka\\Framework\\": [
+                "packages/mailer/src"
+            ],
+            "Zorachka\\Http\\": [
+                "packages/http/src"
+            ],
+            "Zorachka\\Logger\\": [
+                "packages/logger/src"
+            ],
+            "Zorachka\\NextPackage\\": "packages/next-package/src",
+            "Zorachka\\Uuid\\": [
+                "packages/uuid/src"
+            ]
         }
     },
     "autoload-dev": {
         "psr-4": {
+            "Tests\\Zorachka\\Uuid\\": [
+                "packages/uuid/tests"
+            ],
+            "Zorachka\\Clock\\Tests\\": [
+                "packages/clock/tests"
+            ],
+            "Zorachka\\Console\\Tests\\": "packages/console/tests",
             "Zorachka\\Container\\Tests\\": "packages/container/tests",
-            "Zorachka\\FirstPackage\\": "packages/first-package/./tests"
+            "Zorachka\\Database\\Tests\\": [
+                "packages/database/tests"
+            ],
+            "Zorachka\\Directories\\Tests\\": "packages/directories/tests",
+            "Zorachka\\Environment\\Tests\\": [
+                "packages/environment/tests"
+            ],
+            "Zorachka\\ErrorHandler\\Tests\\": [
+                "packages/error-handler/tests"
+            ],
+            "Zorachka\\EventDispatcher\\Tests\\": "packages/event-dispatcher/tests",
+            "Zorachka\\Framework\\Tests\\": "packages/mailer/tests",
+            "Zorachka\\Http\\Tests\\": [
+                "packages/http/tests"
+            ],
+            "Zorachka\\Logger\\Tests\\": "packages/logger/tests",
+            "Zorachka\\NextPackage\\Tests\\": "packages/next-package/tests"
         }
     },
     "replace": {
+        "zorachka/clock": "self.version",
+        "zorachka/console": "self.version",
         "zorachka/container": "self.version",
-        "zorachka/first-package": "self.version",
-        "zorachka/second-package": "self.version"
+        "zorachka/database": "self.version",
+        "zorachka/directories": "self.version",
+        "zorachka/environment": "self.version",
+        "zorachka/error-handler": "self.version",
+        "zorachka/event-dispatcher": "self.version",
+        "zorachka/http": "self.version",
+        "zorachka/logger": "self.version",
+        "zorachka/mailer": "self.version",
+        "zorachka/next-package": "self.version",
+        "zorachka/uuid": "self.version"
     },
     "config": {
         "sort-packages": true,

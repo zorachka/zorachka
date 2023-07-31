@@ -1,0 +1,42 @@
+{
+    "name": "zorachka/event-dispatcher",
+    "description": "Event Dispatcher",
+    "keywords": [
+        "zorachka",
+        "event dispatcher",
+        "psr-14"
+    ],
+    "homepage": "https://github.com/zorachka/event-dispatcher",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Siarhei Bautrukevich",
+            "email": "hello@bautrukevich.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "psr/event-dispatcher": "^1.0",
+        "webmozart/assert": "^1.11",
+        "zorachka/container": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zorachka\\EventDispatcher\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Zorachka\\EventDispatcher\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

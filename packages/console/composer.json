@@ -1,0 +1,40 @@
+{
+    "name": "zorachka/console",
+    "description": "Zorachka Console Application",
+    "keywords": [
+        "zorachka",
+        "console"
+    ],
+    "homepage": "https://github.com/zorachka/console",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Siarhei Bautrukevich",
+            "email": "hello@bautrukevich.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "symfony/console": "^6.2",
+        "zorachka/container": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zorachka\\Console\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Zorachka\\Console\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

@@ -1,0 +1,40 @@
+{
+    "name": "zorachka/logger",
+    "description": "Zorachka Logger",
+    "keywords": [
+        "zorachka",
+        "logger"
+    ],
+    "homepage": "https://github.com/zorachka/logger",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Siarhei Bautrukevich",
+            "email": "hello@bautrukevich.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "monolog/monolog": "^3.2",
+        "zorachka/container": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zorachka\\Logger\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Zorachka\\Logger\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

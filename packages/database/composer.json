@@ -1,0 +1,42 @@
+{
+    "name": "zorachka/database",
+    "description": "Database Provider",
+    "type": "project",
+    "require": {
+        "php": "^8.1",
+        "cycle/database": "^2.4",
+        "cycle/migrations": "^4.0",
+        "cycle/schema-migrations-generator": "^2.1",
+        "doctrine/migrations": "^3.6",
+        "doctrine/sql-formatter": "^1.1",
+        "zorachka/console": "^1.1",
+        "zorachka/container": "^3.1",
+        "zorachka/directories": "dev-main",
+        "zorachka/event-dispatcher": "^3.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Siarhei Bautrukevich",
+            "email": "hello@bautrukevich.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Zorachka\\Database\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Zorachka\\Database\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

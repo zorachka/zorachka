@@ -1,0 +1,50 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Zorachka\Framework\Mailer;
+
+use Psr\Container\ContainerInterface;
+use Symfony\Component\Mailer\Mailer;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mailer\Transport\Dsn;
+use Symfony\Component\Mailer\Transport\Smtp\EsmtpTransportFactory;
+use Symfony\Component\Mailer\Transport\TransportInterface;
+use Zorachka\Framework\Container\ServiceProvider;
+
+final class MailerServiceProvider implements ServiceProvider
+{
+    /**
+     * @inheritDoc
+     */
+    public static function getDefinitions(): array
+    {
+        return [
+            TransportInterface::class => static function(ContainerInterface $container) {
+                /** @var MailerConfig $config */
+                $config = $container->get(MailerConfig::class);
+                $dsn = Dsn::fromString(
+                    'smtp://' . $config->user() . ':' . $config->password() . '@' . $config->host() .  ':' .
+                    $config->port()
+                );
+
+                return (new EsmtpTransportFactory)->create($dsn);
+            },
+            MailerInterface::class => static function(ContainerInterface $container) {
+                /** @var TransportInterface $config */
+                $transport = $container->get(TransportInterface::class);
+
+                return new Mailer($transport);
+            },
+            MailerConfig::class => static fn() => MailerConfig::withDefaults(),
+        ];
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public static function getExtensions(): array
+    {
+        return [];
+    }
+}

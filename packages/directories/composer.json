@@ -1,0 +1,40 @@
+{
+    "name": "zorachka/directories",
+    "description": "Zorachka Directories",
+    "keywords": [
+        "zorachka",
+        "directories"
+    ],
+    "homepage": "https://github.com/zorachka/directories",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Siarhei Bautrukevich",
+            "email": "hello@bautrukevich.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "webmozart/assert": "^1.11",
+        "zorachka/container": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zorachka\\Directories\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Zorachka\\Directories\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

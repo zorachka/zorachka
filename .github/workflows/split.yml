@@ -19,8 +19,30 @@ jobs:
       matrix:
         # define package to repository map
         package:
+          - local_path: 'clock'
+            split_repository: 'clock'
+          - local_path: 'console'
+            split_repository: 'console'
           - local_path: 'container'
             split_repository: 'container'
+          - local_path: 'database'
+            split_repository: 'database'
+          - local_path: 'directories'
+            split_repository: 'directories'
+          - local_path: 'environment'
+            split_repository: 'environment'
+          - local_path: 'error-handler'
+            split_repository: 'error-handler'
+          - local_path: 'event-dispatcher'
+            split_repository: 'event-dispatcher'
+          - local_path: 'http'
+            split_repository: 'http'
+          - local_path: 'logger'
+            split_repository: 'logger'
+          - local_path: 'mailer'
+            split_repository: 'mailer'
+          - local_path: 'uuid'
+            split_repository: 'uuid'
 
     steps:
       -   uses: actions/checkout@v3
