@@ -19,11 +19,8 @@ jobs:
       matrix:
         # define package to repository map
         package:
-          -
-            local_path: 'first-package'
-            split_repository: 'first-package'
-          - local_path: 'second-package'
-            split_repository: 'second-package'
+          - local_path: 'container'
+            split_repository: 'container'
 
     steps:
       -   uses: actions/checkout@v3
