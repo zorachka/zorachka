@@ -41,6 +41,12 @@ jobs:
             split_repository: 'logger'
           - local_path: 'mailer'
             split_repository: 'mailer'
+          - local_path: 'middleware-cors'
+            split_repository: 'middleware-cors'
+          - local_path: 'telegram'
+            split_repository: 'telegram'
+          - local_path: 'templates'
+            split_repository: 'templates'
           - local_path: 'uuid'
             split_repository: 'uuid'
 

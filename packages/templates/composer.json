@@ -1,11 +1,11 @@
 {
-    "name": "zorachka/mailer",
-    "description": "Zorachka Mailer",
+    "name": "zorachka/templates",
+    "description": "Zorachka Templates",
     "keywords": [
         "zorachka",
-        "mailer"
+        "templer"
     ],
-    "homepage": "https://github.com/zorachka/mailer",
+    "homepage": "https://github.com/zorachka/templates",
     "license": "MIT",
     "authors": [
         {
@@ -16,17 +16,18 @@
     ],
     "require": {
         "php": "^8.1",
-        "symfony/mailer": "^6.3",
-        "zorachka/container": "^3.1"
+        "twig/twig": "^3.7",
+        "zorachka/container": "^3.1",
+        "zorachka/directories": "dev-main"
     },
     "autoload": {
         "psr-4": {
-            "Zorachka\\Mailer\\": "src"
+            "Zorachka\\Templates\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Zorachka\\Mailer\\Tests\\": "tests"
+            "Zorachka\\Templates\\Tests\\": "tests"
         }
     },
     "config": {

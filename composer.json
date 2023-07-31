@@ -26,17 +26,24 @@
         "php-di/php-di": "^7.0",
         "psr/clock": "^1.0",
         "psr/event-dispatcher": "^1.0",
+        "psr/http-message": "^1.1",
+        "psr/http-server-handler": "^1.0",
+        "psr/http-server-middleware": "^1.0",
         "ramsey/uuid": "^4.7",
         "symfony/console": "^6.2",
-        "symfony/mailer": "^5.3",
+        "symfony/mailer": "^6.3",
+        "telegram-bot/api": "^2.4",
+        "twig/twig": "^3.7",
         "webmozart/assert": "^1.11"
     },
     "require-dev": {
+        "dg/bypass-finals": "^1.3",
         "friendsofphp/php-cs-fixer": "^3.16",
         "phpstan/extension-installer": "^1.2",
         "phpstan/phpstan": "^1.10",
         "phpstan/phpstan-phpunit": "^1.3",
         "phpunit/phpunit": "^9.6",
+        "roave/security-advisories": "dev-latest",
         "symplify/monorepo-builder": "11.2.3.72"
     },
     "autoload": {
@@ -70,7 +77,14 @@
             "Zorachka\\Logger\\": [
                 "packages/logger/src"
             ],
-            "Zorachka\\NextPackage\\": "packages/next-package/src",
+            "Zorachka\\Mailer\\": "packages/mailer/src",
+            "Zorachka\\Middleware\\Cors\\": "packages/middleware-cors/src",
+            "Zorachka\\NextPackage\\": [
+                "packages/next-package/src"
+            ],
+            "Zorachka\\Telegram\\": [
+                "packages/telegram/src"
+            ],
             "Zorachka\\Uuid\\": [
                 "packages/uuid/src"
             ]
@@ -102,7 +116,10 @@
                 "packages/http/tests"
             ],
             "Zorachka\\Logger\\Tests\\": "packages/logger/tests",
-            "Zorachka\\NextPackage\\Tests\\": "packages/next-package/tests"
+            "Zorachka\\Mailer\\Tests\\": "packages/mailer/tests",
+            "Zorachka\\Middleware\\Cors\\Tests\\": "packages/middleware-cors/tests",
+            "Zorachka\\NextPackage\\Tests\\": "packages/next-package/tests",
+            "Zorachka\\Telegram\\Tests\\": "packages/telegram/tests"
         }
     },
     "replace": {
@@ -117,7 +134,9 @@
         "zorachka/http": "self.version",
         "zorachka/logger": "self.version",
         "zorachka/mailer": "self.version",
+        "zorachka/middleware-cors": "self.version",
         "zorachka/next-package": "self.version",
+        "zorachka/telegram": "self.version",
         "zorachka/uuid": "self.version"
     },
     "config": {

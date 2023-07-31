@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Zorachka\Framework\Mailer;
+namespace Zorachka\Mailer;
 
 final class MailerConfig
 {
@@ -12,7 +12,7 @@ final class MailerConfig
     private string $password;
     private string $fromEmail;
 
-    public function __construct(
+    private function __construct(
         string $host,
         int $port,
         string $user,
@@ -36,9 +36,6 @@ final class MailerConfig
         return new self($host, $port, $user, $password, $fromEmail);
     }
 
-    /**
-     * @return string
-     */
     public function host(): string
     {
         return $this->host;
@@ -52,9 +49,6 @@ final class MailerConfig
         return $new;
     }
 
-    /**
-     * @return int
-     */
     public function port(): int
     {
         return $this->port;
@@ -68,9 +62,6 @@ final class MailerConfig
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function user(): string
     {
         return $this->user;
@@ -84,9 +75,6 @@ final class MailerConfig
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function password(): string
     {
         return $this->password;
@@ -100,9 +88,6 @@ final class MailerConfig
         return $new;
     }
 
-    /**
-     * @return string
-     */
     public function fromEmail(): string
     {
         return $this->fromEmail;

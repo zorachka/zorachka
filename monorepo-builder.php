@@ -39,10 +39,12 @@ return static function (MBConfig $mbConfig): void {
             'phpstan/phpstan' => '^1.10',
             'phpstan/phpstan-phpunit' => '^1.3',
             'phpunit/phpunit' => '^9.6',
+            "roave/security-advisories" => "dev-latest",
+            "dg/bypass-finals" => "^1.3",
         ],
         ComposerJsonSection::SCRIPTS => [
-            'cs-lint' => 'php-cs-fixer fix --config=.php-cs-fixer.php --allow-risky=yes --dry-run --diff',
-            'cs-fix' => 'php-cs-fixer fix --config=.php-cs-fixer.php --allow-risky=yes',
+            'cs.lint' => 'php-cs-fixer fix --config=.php-cs-fixer.php --allow-risky=yes --dry-run --diff',
+            'cs.fix' => 'php-cs-fixer fix --config=.php-cs-fixer.php --allow-risky=yes',
             'analyse' => 'phpstan analyse -c phpstan.neon',
             'test' => 'vendor/bin/phpunit --colors=always',
         ]

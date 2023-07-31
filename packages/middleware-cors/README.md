@@ -2,22 +2,22 @@
     <a href="https://github.com/zorachka" target="_blank">
         <img src="https://avatars0.githubusercontent.com/u/86768962" height="240px">
     </a>
-    <h1 align="center">Zorachka Mailer</h1>
+    <h1 align="center">Zorachka Next Package</h1>
     <br>
 </p>
 
 This package provides ...
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/zorachka/mailer.svg?style=flat-square)](https://packagist.org/packages/zorachka/mailer)
-[![Tests](https://github.com/zorachka/mailer/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/zorachka/mailer/actions/workflows/run-tests.yml)
-[![Analysis](https://github.com/zorachka/mailer/actions/workflows/analyze.yml/badge.svg?branch=main)](https://github.com/zorachka/mailer/actions/workflows/run-tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/zorachka/mailer.svg?style=flat-square)](https://packagist.org/packages/zorachka/mailer)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/zorachka/next-package.svg?style=flat-square)](https://packagist.org/packages/zorachka/next-package)
+[![Tests](https://github.com/zorachka/next-package/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/zorachka/next-package/actions/workflows/run-tests.yml)
+[![Analysis](https://github.com/zorachka/next-package/actions/workflows/analyze.yml/badge.svg?branch=main)](https://github.com/zorachka/next-package/actions/workflows/run-tests.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/zorachka/next-package.svg?style=flat-square)](https://packagist.org/packages/zorachka/next-package)
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require zorachka/mailer
+composer require zorachka/next-package
 ```
 
 ## Usage
