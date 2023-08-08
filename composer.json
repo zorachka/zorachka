@@ -34,7 +34,9 @@
         "symfony/mailer": "^6.3",
         "telegram-bot/api": "^2.4",
         "twig/twig": "^3.7",
-        "webmozart/assert": "^1.11"
+        "webmozart/assert": "^1.11",
+        "yiisoft/cache": "^3.0",
+        "yiisoft/db-pgsql": "^1.1"
     },
     "require-dev": {
         "dg/bypass-finals": "^1.3",
