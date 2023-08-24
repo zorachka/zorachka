@@ -16,20 +16,10 @@ use Zorachka\Mapper\Serializers;
 
 final class ObjectSerializerUsingReflection implements Serializer
 {
-    private array $propertySerializers;
-    private KeyFormatter $keyFormatter;
-
-    public function __construct()
-    {
-        $this->propertySerializers = [
-            DateTimeImmutable::class => static fn () => new Serializers\DateTimeImmutablePropertySerializer(),
-            'string' => static fn () => new Serializers\DefaultPropertySerializer(),
-            'int' => static fn () => new Serializers\DefaultPropertySerializer(),
-            'bool' => static fn () => new Serializers\DefaultPropertySerializer(),
-            'enum' => static fn () => new Serializers\EnumPropertySerializer(),
-            'object' => static fn () => new Serializers\ObjectPropertySerializer(),
-        ];
-        $this->keyFormatter = new KeyFormatters\KeyFormatterForSnakeCasing();
+    public function __construct(
+        private readonly array $propertySerializers,
+        private readonly KeyFormatter $keyFormatter,
+    ) {
     }
 
     private function getPropertySerializer(mixed $value, string $typeName): Closure
