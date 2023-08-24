@@ -26,7 +26,7 @@
         "php-di/php-di": "^7.0",
         "psr/clock": "^1.0",
         "psr/event-dispatcher": "^1.0",
-        "psr/http-message": "^1.1",
+        "psr/http-message": "^1.0",
         "psr/http-server-handler": "^1.0",
         "psr/http-server-middleware": "^1.0",
         "ramsey/uuid": "^4.7",
@@ -80,6 +80,7 @@
                 "packages/logger/src"
             ],
             "Zorachka\\Mailer\\": "packages/mailer/src",
+            "Zorachka\\Mapper\\": "packages/mapper/src",
             "Zorachka\\Middleware\\Cors\\": "packages/middleware-cors/src",
             "Zorachka\\NextPackage\\": [
                 "packages/next-package/src"
@@ -119,6 +120,7 @@
             ],
             "Zorachka\\Logger\\Tests\\": "packages/logger/tests",
             "Zorachka\\Mailer\\Tests\\": "packages/mailer/tests",
+            "Zorachka\\Mapper\\Tests\\": "packages/mapper/tests",
             "Zorachka\\Middleware\\Cors\\Tests\\": "packages/middleware-cors/tests",
             "Zorachka\\NextPackage\\Tests\\": "packages/next-package/tests",
             "Zorachka\\Telegram\\Tests\\": "packages/telegram/tests"
@@ -136,6 +138,7 @@
         "zorachka/http": "self.version",
         "zorachka/logger": "self.version",
         "zorachka/mailer": "self.version",
+        "zorachka/mapper": "self.version",
         "zorachka/middleware-cors": "self.version",
         "zorachka/next-package": "self.version",
         "zorachka/telegram": "self.version",
