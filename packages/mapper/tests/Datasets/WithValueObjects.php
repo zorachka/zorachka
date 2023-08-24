@@ -16,7 +16,8 @@ final class WithValueObjects
         private readonly PostTitle $title,
         private readonly Price $price,
         private readonly DateTimeRFC3339 $createdAt,
-    ) {}
+    ) {
+    }
 
     public static function create(Id $id, PostTitle $title, Price $price, DateTimeRFC3339 $createdAt): self
     {

@@ -18,6 +18,9 @@ use Zorachka\Mapper\Tests\Datasets\WithScalarAndDateTimeImmutable;
 use Zorachka\Mapper\Tests\Datasets\WithScalarAndStatusEnum;
 use Zorachka\Mapper\Tests\Datasets\WithValueObjects;
 
+/**
+ * @internal
+ */
 final class SerializerTest extends TestCase
 {
     public function providesData(): array

@@ -15,7 +15,6 @@ final class WithScalarAndStatusEnum
         private readonly PublishedStatusInt $publishedStatus,
         private readonly PaymentStatusString $paymentStatus,
         private readonly DateTimeImmutable $createdAt,
-    )
-    {
+    ) {
     }
 }

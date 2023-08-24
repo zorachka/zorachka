@@ -13,7 +13,6 @@ final class WithScalarAndDateTimeImmutable
         private readonly int $status,
         private readonly bool $isAvailable,
         private readonly DateTimeImmutable $createdAt,
-    )
-    {
+    ) {
     }
 }

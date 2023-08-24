@@ -8,7 +8,6 @@ use UnitEnum;
 use Webmozart\Assert\Assert;
 use Zorachka\Mapper\PropertySerializer;
 use Zorachka\Mapper\Serializer;
-use Zorachka\Mapper\Tests\Datasets\ValueObjects\PaymentStatusString;
 
 final class EnumPropertySerializer implements PropertySerializer
 {

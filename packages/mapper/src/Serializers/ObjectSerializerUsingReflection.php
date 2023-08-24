@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Zorachka\Mapper\Serializers;
 
 use Closure;
+use DateTimeImmutable;
 use ReflectionClass;
 use ReflectionProperty;
 use UnitEnum;
@@ -21,14 +22,14 @@ final class ObjectSerializerUsingReflection implements Serializer
     public function __construct()
     {
         $this->propertySerializers = [
-            \DateTimeImmutable::class => static fn() => new Serializers\DateTimeImmutablePropertySerializer,
-            'string' => static fn() => new Serializers\DefaultPropertySerializer,
-            'int' => static fn() => new Serializers\DefaultPropertySerializer,
-            'bool' => static fn() => new Serializers\DefaultPropertySerializer,
-            'enum' => static fn() => new Serializers\EnumPropertySerializer,
-            'object' => static fn() => new Serializers\ObjectPropertySerializer,
+            DateTimeImmutable::class => static fn () => new Serializers\DateTimeImmutablePropertySerializer(),
+            'string' => static fn () => new Serializers\DefaultPropertySerializer(),
+            'int' => static fn () => new Serializers\DefaultPropertySerializer(),
+            'bool' => static fn () => new Serializers\DefaultPropertySerializer(),
+            'enum' => static fn () => new Serializers\EnumPropertySerializer(),
+            'object' => static fn () => new Serializers\ObjectPropertySerializer(),
         ];
-        $this->keyFormatter = new KeyFormatters\KeyFormatterForSnakeCasing;
+        $this->keyFormatter = new KeyFormatters\KeyFormatterForSnakeCasing();
     }
 
     private function getPropertySerializer(mixed $value, string $typeName): Closure
