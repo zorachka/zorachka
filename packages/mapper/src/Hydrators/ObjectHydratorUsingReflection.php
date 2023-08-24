@@ -6,18 +6,15 @@ namespace Zorachka\Mapper\Hydrators;
 
 use Closure;
 use ReflectionClass;
-use UnitEnum;
 use Zorachka\Mapper\Hydrator;
 use Zorachka\Mapper\KeyFormatter;
-use Zorachka\Mapper\Tests\Datasets\ValueObjects\Price;
 
 final class ObjectHydratorUsingReflection implements Hydrator
 {
     public function __construct(
         private readonly array $propertyHydrators,
         private readonly KeyFormatter $keyFormatter,
-    )
-    {
+    ) {
     }
 
     private function getPropertyHydrator(mixed $value, string $typeName): Closure
@@ -47,9 +44,7 @@ final class ObjectHydratorUsingReflection implements Hydrator
 
             $property->setAccessible(true);
 
-            $rawValues = array_filter($data, function($key) use ($keyName) {
-                return str_starts_with($key, $keyName);
-            }, ARRAY_FILTER_USE_KEY);
+            $rawValues = array_filter($data, static fn ($key) => str_starts_with($key, $keyName), ARRAY_FILTER_USE_KEY);
 
             $rawValue = \count($rawValues) > 0 ? $rawValues : $data[$keyName];
             $typeName = $property->getType()->getName();

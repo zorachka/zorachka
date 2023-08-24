@@ -5,14 +5,11 @@ declare(strict_types=1);
 namespace Zorachka\Mapper\Serializers;
 
 use Closure;
-use DateTimeImmutable;
 use ReflectionClass;
 use ReflectionProperty;
 use UnitEnum;
 use Zorachka\Mapper\KeyFormatter;
-use Zorachka\Mapper\KeyFormatters;
 use Zorachka\Mapper\Serializer;
-use Zorachka\Mapper\Serializers;
 
 final class ObjectSerializerUsingReflection implements Serializer
 {
