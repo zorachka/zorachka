@@ -16,6 +16,7 @@ docker.build.pull:
 	docker compose build --pull
 
 app.init: composer.install
+	pnpm install
 
 composer.install:
 	docker compose run --rm php-cli composer install
