@@ -21,6 +21,8 @@ jobs:
         package:
           - local_path: 'clock'
             split_repository: 'clock'
+          - local_path: 'command-bus'
+            split_repository: 'command-bus'
           - local_path: 'console'
             split_repository: 'console'
           - local_path: 'container'

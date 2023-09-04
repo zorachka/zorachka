@@ -19,6 +19,7 @@
         "laminas/laminas-diactoros": "^2.7",
         "laminas/laminas-stdlib": "^3.6",
         "laminas/laminas-stratigility": "^3.9",
+        "league/tactician": "^1.1",
         "mezzio/mezzio": "^3.7",
         "mezzio/mezzio-fastroute": "^3.0.3",
         "mezzio/mezzio-helpers": "^5.7",
@@ -53,6 +54,7 @@
             "Zorachka\\Clock\\": [
                 "packages/clock/src"
             ],
+            "Zorachka\\CommandBus\\": "packages/command-bus/src",
             "Zorachka\\Console\\": [
                 "packages/console/src"
             ],
@@ -101,6 +103,7 @@
             "Zorachka\\Clock\\Tests\\": [
                 "packages/clock/tests"
             ],
+            "Zorachka\\CommandBus\\Tests\\": "packages/command-bus/tests",
             "Zorachka\\Console\\Tests\\": "packages/console/tests",
             "Zorachka\\Container\\Tests\\": "packages/container/tests",
             "Zorachka\\Database\\Tests\\": [
@@ -128,6 +131,7 @@
     },
     "replace": {
         "zorachka/clock": "self.version",
+        "zorachka/command-bus": "self.version",
         "zorachka/console": "self.version",
         "zorachka/container": "self.version",
         "zorachka/database": "self.version",
