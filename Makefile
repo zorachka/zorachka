@@ -51,8 +51,8 @@ cli.list:
 cli.migrations.status:
 	docker compose run --rm php-cli php bin/app.php --ansi migrations:status
 
-cli.migrations.generate:
-	docker compose run --rm php-cli php bin/app.php --ansi migrations:diff
+cli.migrations.diff:
+	docker compose run --rm php-cli php bin/app.php --ansi migrations:diff --formatted
 
 cli.migrations.list:
 	docker compose run --rm php-cli php bin/app.php --ansi migrations:list

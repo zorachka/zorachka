@@ -87,6 +87,7 @@
             "Zorachka\\NextPackage\\": [
                 "packages/next-package/src"
             ],
+            "Zorachka\\Seeder\\": "packages/seeder/src",
             "Zorachka\\Telegram\\": [
                 "packages/telegram/src"
             ],
@@ -126,6 +127,7 @@
             "Zorachka\\Mapper\\Tests\\": "packages/mapper/tests",
             "Zorachka\\Middleware\\Cors\\Tests\\": "packages/middleware-cors/tests",
             "Zorachka\\NextPackage\\Tests\\": "packages/next-package/tests",
+            "Zorachka\\Seeder\\Tests\\": "packages/seeder/tests",
             "Zorachka\\Telegram\\Tests\\": "packages/telegram/tests"
         }
     },
@@ -145,6 +147,7 @@
         "zorachka/mapper": "self.version",
         "zorachka/middleware-cors": "self.version",
         "zorachka/next-package": "self.version",
+        "zorachka/seeder": "self.version",
         "zorachka/telegram": "self.version",
         "zorachka/uuid": "self.version"
     },

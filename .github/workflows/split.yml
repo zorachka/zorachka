@@ -47,6 +47,8 @@ jobs:
             split_repository: 'mapper'
           - local_path: 'middleware-cors'
             split_repository: 'middleware-cors'
+          - local_path: 'seeder'
+            split_repository: 'seeder'
           - local_path: 'telegram'
             split_repository: 'telegram'
           - local_path: 'templates'
