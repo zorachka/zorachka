@@ -28,7 +28,7 @@ final class MailerServiceProvider implements ServiceProvider
                 return (new EsmtpTransportFactory())->create($dsn);
             },
             MailerInterface::class => static function (ContainerInterface $container) {
-                /** @var TransportInterface $config */
+                /** @var TransportInterface $transport */
                 $transport = $container->get(TransportInterface::class);
 
                 return new Mailer($transport);

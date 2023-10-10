@@ -17,9 +17,12 @@
         "doctrine/sql-formatter": "^1.1",
         "fakerphp/faker": "^1.23",
         "filp/whoops": "^2.15",
+        "innmind/immutable": "^5.0",
         "laminas/laminas-diactoros": "^2.7",
         "laminas/laminas-stdlib": "^3.6",
         "laminas/laminas-stratigility": "^3.9",
+        "league/flysystem": "^3.16",
+        "league/flysystem-aws-s3-v3": "^3.16",
         "league/tactician": "^1.1",
         "mezzio/mezzio": "^3.7",
         "mezzio/mezzio-fastroute": "^3.0.3",
@@ -73,6 +76,7 @@
                 "packages/error-handler/src"
             ],
             "Zorachka\\EventDispatcher\\": "packages/event-dispatcher/src",
+            "Zorachka\\Filesystem\\": "packages/filesystem/src",
             "Zorachka\\Framework\\": [
                 "packages/mailer/src"
             ],
@@ -88,6 +92,7 @@
             "Zorachka\\NextPackage\\": [
                 "packages/next-package/src"
             ],
+            "Zorachka\\RBAC\\": "packages/rbac/src",
             "Zorachka\\Seeder\\": "packages/seeder/src",
             "Zorachka\\Telegram\\": [
                 "packages/telegram/src"
@@ -119,6 +124,7 @@
                 "packages/error-handler/tests"
             ],
             "Zorachka\\EventDispatcher\\Tests\\": "packages/event-dispatcher/tests",
+            "Zorachka\\Filesystem\\Tests\\": "packages/filesystem/tests",
             "Zorachka\\Framework\\Tests\\": "packages/mailer/tests",
             "Zorachka\\Http\\Tests\\": [
                 "packages/http/tests"
@@ -128,6 +134,7 @@
             "Zorachka\\Mapper\\Tests\\": "packages/mapper/tests",
             "Zorachka\\Middleware\\Cors\\Tests\\": "packages/middleware-cors/tests",
             "Zorachka\\NextPackage\\Tests\\": "packages/next-package/tests",
+            "Zorachka\\RBAC\\Tests\\": "packages/rbac/tests",
             "Zorachka\\Seeder\\Tests\\": "packages/seeder/tests",
             "Zorachka\\Telegram\\Tests\\": "packages/telegram/tests"
         }
@@ -142,12 +149,14 @@
         "zorachka/environment": "self.version",
         "zorachka/error-handler": "self.version",
         "zorachka/event-dispatcher": "self.version",
+        "zorachka/filesystem": "self.version",
         "zorachka/http": "self.version",
         "zorachka/logger": "self.version",
         "zorachka/mailer": "self.version",
         "zorachka/mapper": "self.version",
         "zorachka/middleware-cors": "self.version",
         "zorachka/next-package": "self.version",
+        "zorachka/rbac": "self.version",
         "zorachka/seeder": "self.version",
         "zorachka/telegram": "self.version",
         "zorachka/uuid": "self.version"
