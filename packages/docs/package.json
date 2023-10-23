@@ -1,8 +1,8 @@
 {
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build"
-  },
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build"
+	},
 	"dependencies": {
 		"next": "^13.5.4",
 		"nextra": "^2.13.2",
@@ -10,5 +10,10 @@
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"webpod": "^1.0.0"
+	},
+	"devDependencies": {
+		"@types/node": "20.8.7",
+		"@types/react": "18.2.31",
+		"typescript": "5.2.2"
 	}
 }
